@@ -1,0 +1,284 @@
+/* Reset CSS dan Variabel Warna */
+:root {
+  --primary: #6c63ff;
+  --primary-light: #a5a1ff;
+  --secondary: #4dabf7;
+  --success: #51cf66;
+  --warning: #fcc419;
+  --danger: #ff6b6b;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --gray: #adb5bd;
+  --white: #ffffff;
+
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  color: var(--dark);
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container Utama */
+.container {
+  background-color: var(--white);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  margin: 20px 0;
+  transition: var(--transition);
+}
+
+.container:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul Aplikasi */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.title h1 {
+  font-size: 28px;
+  margin-bottom: 5px;
+}
+
+.title p {
+  color: var(--gray);
+  font-size: 14px;
+}
+
+/* Form Input */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: var(--transition);
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+/* Radio Button Standar */
+.standard-selection {
+  margin-bottom: 25px;
+}
+
+.standard-title {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio-option input {
+  display: none;
+}
+
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gray);
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  transition: var(--transition);
+}
+
+.radio-option input:checked + .radio-custom {
+  border-color: var(--primary);
+}
+
+.radio-option input:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary);
+  border-radius: 50%;
+}
+
+/* Tombol Hitung */
+.calculate-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 20px;
+}
+
+.calculate-btn:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.calculate-btn:active {
+  transform: translateY(0);
+}
+
+/* Hasil BMI */
+.result {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  background-color: var(--light);
+}
+
+.result.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bmi-value {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.bmi-category {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.bmi-message {
+  color: var(--gray);
+}
+
+/* Klasifikasi BMI */
+.classification {
+  background-color: var(--light);
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.classification-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.classification-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.classification-table th,
+.classification-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.classification-table th {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+/* Warna Kategori */
+.underweight {
+  color: var(--secondary);
+}
+
+.normal {
+  color: var(--success);
+}
+
+.overweight {
+  color: var(--warning);
+}
+
+.obesity {
+  color: var(--danger);
+}
+
+/* Responsif untuk Mobile */
+@media (max-width: 576px) {
+  .container {
+    padding: 20px;
+  }
+
+  .title h1 {
+    font-size: 24px;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
