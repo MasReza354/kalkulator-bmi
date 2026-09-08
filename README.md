@@ -70,7 +70,7 @@ Proyek ini dibuat menggunakan teknologi web murni (*Vanilla HTML, CSS, JavaScrip
 
 1. **Clone repositori ini ke komputer Anda:**
    ```bash
-   git clone https://github.com/username-anda/kalkulator-bmi.git
+   git clone https://github.com/MasReza354/kalkulator-bmi.git
    ```
 2. **Masuk ke folder proyek:**
    ```bash
