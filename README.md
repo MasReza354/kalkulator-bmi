@@ -59,11 +59,6 @@ kalkulator-bmi/
 ├── LICENSE           # Lisensi proyek (MIT License)
 └── README.md         # Dokumentasi resmi proyek
 ```
-
-> *Catatan: Jika file HTML Anda saat ini bernama `index1.html`, Anda dapat mengubah namanya menjadi `index.html` agar langsung terbaca secara default oleh web server atau GitHub Pages.*
-
----
-
 ## 🚀 Cara Menjalankan Proyek Secara Lokal
 
 Proyek ini dibuat menggunakan teknologi web murni (*Vanilla HTML, CSS, JavaScript*), sehingga tidak memerlukan dependensi tambahan atau instalasi package manager (Node.js/npm).
