@@ -74,7 +74,7 @@ Proyek ini dibuat menggunakan teknologi web murni (*Vanilla HTML, CSS, JavaScrip
 3. **Jalankan aplikasi:**
    - Cukup klik dua kali (*double click*) file `index.html` untuk langsung membukanya di browser favorit Anda.
    - Atau gunakan ekstensi **Live Server** pada Visual Studio Code.
-   - Atau letakkan pada web server lokal seperti **Laragon/XAMPP** di direktori `www` / `htdocs`.
+   - Atau letakkan pada web server lokal seperti **XAMPP** di direktori `htdocs`.
 
 ---
 
